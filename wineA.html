@@ -1,0 +1,272 @@
+<!-- templates/base.html  -->
+
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title> 一管葡萄酒 </title>
+
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.init.js"></script>
+    <script type="text/javascript" src="static/js/actions.js"></script>
+    <script type="text/javascript" src="static/d3.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="static/css/wine.css" rel="stylesheet">
+</head>
+<body>
+    <img id="sample" src="static/images/sample.png" style="margin-left: 0px;margin-top: 40px;width:100%;">
+    <div class="detail_cover">
+        <h1 class="detail_text">拉图嘉利庄园红葡萄酒（正牌）</h1>
+        <h2 class="detail_text">Chateau La Tour Carnet</h2>
+        <br>
+        <h2 class="detail_text">基本信息</h2>
+        <div class="underline"></div>
+        <div id="basic_info">
+            <svg id="info" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+                <rect id="bottle_color" x="361" y="21" width="146" height="508" fill="#B13445"></rect>
+                <image id="bottle" xlink:href="static/images/bottle.png" x="361" y="20" height="510" width="148" style="z-index:100;"/> 
+            </svg>
+        </div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <br>
+        <h2 class="detail_text">产区</h2>
+        <div class="underline"></div>
+        <div id="region_cover">
+            <div id="country">
+                <img id="country_img" src="static/images/country_france.png" alt="Smiley face">
+                <span class="region_text">法国</span>
+                <span class="region_sub_text">France</span>
+            </div>
+            <div id="line1"></div>
+            <div id="region">
+                <span class="region_text">波尔多，上梅多克产区</span>
+                <span class="region_sub_text">Bordeaux, Haut-Medoc</span>
+            </div>
+            <div id="winery">
+                <img id="winery_img" src="static/images/winery_la_tour_carnet.png" alt="Smiley face">
+                <span class="region_text">拉图嘉利庄园</span>
+                <span class="region_sub_text">Chateau la Tour Carnet</span>
+            </div>
+            <div id="line2"></div>
+        </div>
+        <div class="blank"></div>
+        <br>
+        <h2 class="detail_text">配餐</h2>
+        <div class="underline"></div>
+        <div id="matched_food">
+            <div class="food">
+                <div class="food_title" id="flavor_title">味道</div>
+                <div class="flavor">酸</div>
+                <div class="flavor">甜</div>
+                <div class="flavor">苦</div>
+                <div class="flavor">辣</div>
+                <div class="flavor flavor_selected">咸</div>
+                <div class="flavor flavor_selected">鲜</div>
+            </div>
+            <div class="food">
+                <div class="food_title" id="ingredient_title">食物</div>
+                <div class="ingredient ingredient_selected">牛羊肉</div>
+                <div class="ingredient ingredient_selected">鸡肉</div>
+                <div class="ingredient">海鲜</div>
+                <div class="ingredient ingredient_selected">野味</div>
+                <div class="ingredient">蔬菜</div>
+                <div class="ingredient">淀粉类</div>
+                <div class="ingredient">奶酪</div>
+                <div class="ingredient">甜点</div>
+            </div>
+            <div class="food">
+                <div class="food_title" id="cooking_title">烹饪</div>
+                <div class="cooking">生食</div>
+                <div class="cooking">清蒸</div>
+                <div class="cooking cooking_selected">烘烤</div>
+                <div class="cooking">烟熏</div>
+                <div class="cooking">油炸</div>
+                <div class="cooking">重酱</div>
+            </div>
+        </div>
+        <div class="matched_food_list">
+            <div id="matched_food_list_title">建议配餐</div>
+            <div class="dashline"></div>
+            <div id="matched_food_list_content">
+                <div>根据选择展示配餐1</div>
+                <div>根据选择展示配餐2</div>
+                <div>根据选择展示配餐3</div>
+            </div>
+        </div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <br>
+        <br>
+        <h2 class="detail_text">酒评</h2>
+        <div class="underline"></div>
+        <div id="critic_title">
+            <div class="critic_subtitle critic_title_selected" id="critic_authority">权威酒评（4.5／5）</div>
+            <div class="critic_subtitle" id="critic_user">用户酒评（4／5）</div>
+        </div>
+        <div id="authority_critic_list">
+            <div class="critic">
+                <div class="critic_text">Full of grapefruit, lime and zesty citrus flavours with mouth watering acidity.</div>
+                <div class="critic_score">4.5</div>
+                <div class="critic_info">Nudge Stratford</div>
+                <div class="critic_date">2020/11/21</div>
+            </div>
+            <div class="critic">
+                <div class="critic_text">Dominated by grapefruit, with lemon rind and citrus rounding out the palate. Refreshing. Amazing value at under $15 a bottle.</div>
+                <div class="critic_score">4.5</div>
+                <div class="critic_info">Anthony Clemenza</div>
+                <div class="critic_date">2020/09/09</div>
+            </div>
+            <div class="critic">
+                <div class="critic_text">Clean, fresh, aromatic and tasty 😋 Light & dry, with high acidity and full of tropical aromas. Citrus, apples, mango, pineapple and melon at a incredible price. Speechless......🤙</div>
+                <div class="critic_score">4.5</div>
+                <div class="critic_info">Gabi Bulumac</div>
+                <div class="critic_date">2020/04/10</div>
+            </div>
+        </div>
+        <div id="user_critic_list" style="display:none;">
+            <div class="critic">
+                <div class="critic_text">Classic NZ Sav Blanc. Acidic, dry, grapefruit, stone, honey.</div>
+                <div class="critic_score">4.0</div>
+                <div class="critic_info">Aaron Lapsley</div>
+                <div class="critic_date">2021/01/17</div>
+            </div>
+            <div class="critic">
+                <div class="critic_text">Dry.</div>
+                <div class="critic_score">3.0</div>
+                <div class="critic_info">Snezana Munitlak</div>
+                <div class="critic_date">2020/12/30</div>
+            </div>
+            <div class="critic">
+                <div class="critic_text">Fresh and fruity white wine. Simple for a relaxing evening with good smell</div>
+                <div class="critic_score">5.0</div>
+                <div class="critic_info">Urtė T</div>
+                <div class="critic_date">2020/10/17</div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <br><br>
+
+
+
+    <!-- jQurery -->
+    <link href="static/css/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="static/js/jquery-1.12.4.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $('#region').css("padding-top", window.innerWidth * 0.3 * 0.4 + "px");
+        var svg = d3.select('#info');
+        var wine_info = {
+            'category': '红',
+            'wine_color':'#B13445',
+            'acidity': 5,
+            'sweetness': 1,
+            'tannin': 4.5,
+            'body': 4,
+            'grapes': [['梅洛', 0.8], ['赤霞珠', 0.15], ['品丽珠', 0.05]],
+            'temp': '16°C',
+            'abv': '15%',
+            'year': 2013,
+        }
+        var category_color = {
+            '红': '#B13445',
+        };
+        svg.select('#bottle').attr("x", window.innerWidth * 0.45 - 80);
+        svg.select('#bottle_color').attr("x", window.innerWidth * 0.45 - 80 + 1).attr("fill", wine_info['wine_color']);
+        svg.append("circle").attr("r", "40").attr("cx", 42).attr("cy", 62).attr("fill", category_color[wine_info['category']]);
+        svg.append('text').attr("x", 22).attr("y", 76).attr("stroke", '#fff').attr("fill", '#fff').text(wine_info['category']).style("font-size", "1.9em");
+
+        var line_len = window.innerWidth * 0.45 - 160 - 10;
+        svg.append("line").attr("x1", 10).attr("y1", 240).attr("x2", window.innerWidth * 0.45 - 160).attr("y2", 240)
+            .attr("stroke", '#77963F').attr("stroke-width", 4); //acidity
+        svg.append("line").attr("x1", 10).attr("y1", 300).attr("x2", window.innerWidth * 0.45 - 160).attr("y2", 300)
+            .attr("stroke", '#FFDE59').attr("stroke-width", 4); //sweetness
+        svg.append("line").attr("x1", 10).attr("y1", 360).attr("x2", window.innerWidth * 0.45 - 160).attr("y2", 360)
+            .attr("stroke", '#273F80').attr("stroke-width", 4); //tanniin
+        svg.append("line").attr("x1", 10).attr("y1", 420).attr("x2", window.innerWidth * 0.45 - 160).attr("y2", 420)
+            .attr("stroke", '#C53422').attr("stroke-width", 4); //body
+        svg.append('text').attr("x", window.innerWidth * 0.45 - 149).attr("y", 250).attr("stroke", '#555').attr("fill", '#555')
+            .style("font-size", "1.4em").text('酸度');
+        svg.append('text').attr("x", window.innerWidth * 0.45 - 149).attr("y", 310).attr("stroke", '#555').attr("fill", '#555')
+            .style("font-size", "1.4em").text('甜度');
+        svg.append('text').attr("x", window.innerWidth * 0.45 - 149).attr("y", 370).attr("stroke", '#555').attr("fill", '#555')
+            .style("font-size", "1.4em").text('单宁');
+        svg.append('text').attr("x", window.innerWidth * 0.45 - 149).attr("y", 430).attr("stroke", '#555').attr("fill", '#555')
+            .style("font-size", "1.4em").text('酒体');
+        svg.append("svg:image").attr("width", 55).attr("height", 55).attr("xlink:href", "static/images/acidity.png")
+            .attr("x", 10 + line_len / 5 * (wine_info['acidity'] - 1)).attr("y", 240 - 27);
+        svg.append("svg:image").attr("width", 55).attr("height", 55).attr("xlink:href", "static/images/sweetness.png")
+            .attr("x", 10 + line_len / 5 * (wine_info['sweetness'] - 1)).attr("y", 300 - 27);
+        svg.append("svg:image").attr("width", 55).attr("height", 55).attr("xlink:href", "static/images/tannin.png")
+            .attr("x", 10 + line_len / 5 * (wine_info['tannin'] - 1)).attr("y", 360 - 27);
+        svg.append("svg:image").attr("width", 55).attr("height", 55).attr("xlink:href", "static/images/body.png")
+            .attr("x", 10 + line_len / 5 * (wine_info['body'] - 1)).attr("y", 420 - 27);
+
+        var matched_food = [0,0,0];
+        $('.flavor').click(function(){
+            matched_food[0] = 1 - matched_food[0];
+            if($(this).css("border") == "1px solid rgb(51, 51, 51)"){
+                $('.flavor').css("border", "1px solid rgba(0,0,0,0)");
+                if(matched_food.indexOf(1) == -1){
+                    $('.matched_food_list').removeClass('active');  //css("display", "none")
+                }
+            }
+            else if($(this).css("background-color") == "rgb(255, 222, 89)"){
+                $('.flavor').css("border", "1px solid rgba(0,0,0,0)");
+                $(this).css("border", "1px solid #333");
+                $('.matched_food_list').addClass('active');
+            }
+            
+        });
+        $('.ingredient').click(function(){
+            matched_food[1] = 1 - matched_food[1];
+            if($(this).css("border") == "1px solid rgb(51, 51, 51)"){
+                $('.ingredient').css("border", "1px solid rgba(0,0,0,0)");
+                if(matched_food.indexOf(1) == -1){
+                    $('.matched_food_list').removeClass('active');
+                }
+            }
+            else if($(this).css("background-color") == "rgb(253, 162, 160)"){
+                $('.ingredient').css("border", "1px solid rgba(0,0,0,0)");
+                $(this).css("border", "1px solid #333");
+                $('.matched_food_list').addClass('active');
+            }
+        });
+        $('.cooking').click(function(){
+            matched_food[2] = 1 - matched_food[2];
+            if($(this).css("border") == "1px solid rgb(51, 51, 51)"){
+                $('.cooking').css("border", "1px solid rgba(0,0,0,0)");
+                if(matched_food.indexOf(1) == -1){
+                    $('.matched_food_list').removeClass('active');
+                }
+            }
+            else if($(this).css("background-color") == "rgb(39, 63, 128)"){
+                $('.cooking').css("border", "1px solid rgba(0,0,0,0)");
+                $('.cooking').css('color','#333');
+                $(this).css("border", "1px solid #333");
+                $(this).css('color','#fff');
+                $('.matched_food_list').addClass('active');
+            }
+        });
+        $('.critic_subtitle').click(function(){
+            $('.critic_subtitle').removeClass('critic_title_selected');
+            $(this).addClass('critic_title_selected');
+            if($(this).attr('id') == 'critic_authority'){
+                $('#user_critic_list').css('display', 'none');
+                $('#authority_critic_list').css('display', 'block');
+            }
+            else if($(this).attr('id') == 'critic_user'){
+                $('#user_critic_list').css('display', 'block');
+                $('#authority_critic_list').css('display', 'none');
+            }
+        });
+    </script>
+
+</body>
+</html>
